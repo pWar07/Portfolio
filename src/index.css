@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #F1F1F1
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: founder;
+  src: url(../src/assets/fonts/FoundersGrotesk-Semibold.ttf);
+}
+
+@font-face {
+  font-family: neue;
+  src: url(../src/assets/fonts/NeueMontreal-Regular.ttf);
+}
+
