@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <div
-      className='fixed z-[999] w-full px-[200px] py-6 font-["neue"] flex justify-between items-center'
+      className='fixed z-[999] w-full px-10 lg:px-[200px] py-6 font-["neue"] flex justify-between items-center'
       style={{ backdropFilter: "blur(10px)" }}
     >
       <div className="name">

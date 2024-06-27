@@ -25,7 +25,7 @@ export const Social = [
 const LandingPage = () => {
   return (
     <div className="w-full h-screen bg-[#F1F1F1] pt-1">
-      <div className="textStr mt-40 px-[200px] flex justify-between items-center">
+      <div className="textStr mt-40 px-[100px] lg:px-[200px] block justify-between items-center lg:flex">
         <div className="text-content relative z-10">
           {["Pranav Pawar", "I am a", "Web Developer"].map((v, i) => {
             return (
@@ -52,7 +52,7 @@ const LandingPage = () => {
           <img
             src={prof}
             alt="Profile"
-            className="w-full h-auto object-cover rounded-3xl"
+            className="w-[300px] h-[320px] object-cover rounded-3xl"
           />
         </div>
       </div>

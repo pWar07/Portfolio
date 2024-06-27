@@ -7,7 +7,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #F1F1F1
+  background-color: #f1f1f1;
 }
 
 @tailwind base;
@@ -24,3 +24,52 @@ body {
   src: url(../src/assets/fonts/NeueMontreal-Regular.ttf);
 }
 
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css";
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #3f3f46;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@layer components{
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #3f3f46;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .leftArrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 34px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -14px;
+  }
+
+  .rightArrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 34px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -14px;
+  }
+}

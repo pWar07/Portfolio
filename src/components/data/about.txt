@@ -136,3 +136,40 @@ export const About = () => {
 
 
 
+
+
+
+
+
+<div className="px-[200px] pt-10 flex flex-col items-center gap-[30px] justify-center">
+        {Edu.map((v, i) => {
+          let Calend = v.cal;
+          return (
+            // ${i % 2 === 0 ? "hover:-ml-[200px]" : "hover:-mr-[200px]"}
+            <div
+              className={`relative card border-[1px] border-zinc-900 rounded-xl min-w-[650px] p-8 duration-1000 transition-all`}
+            >
+              <div className="header gap-6 flex items-center">
+                <img
+                  alt=""
+                  className="w-20 h-20 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${v.icon})` }}
+                />
+                <div className="content">
+                  <h1 className='text-xl font-["neue"]'>{v.name}</h1>
+                  <h1 className="text-sm font-['neue'] text-zinc-700">
+                    {v.stream}
+                  </h1>
+                  <h1 className="text-sm flex items-center gap-1 font-['neue'] text-zinc-700">
+                    <Calend />
+                    {v.date}
+                  </h1>
+                  <h1 className="text-md text-zinc-700 font-['neue']">
+                    CGPA : {v.cgpa}
+                  </h1>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>

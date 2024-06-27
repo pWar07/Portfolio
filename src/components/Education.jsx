@@ -6,28 +6,28 @@ import { CiCalendar } from "react-icons/ci";
 const Edu = [
   {
     id: 1,
-    icon: git,
-    name: "Gandhinagar Institute of Technology, Gandhinagar",
+    img: git,
+    title: "Gandhinagar Institute of Technology, Gandhinagar",
     stream: "Information Technology",
-    date: "2020 - 2024",
+    duration: "August 2020 - May 2024",
     cal: CiCalendar,
     cgpa: "8.50",
   },
   {
     id: 2,
-    icon: sncs,
-    name: "Shree Narayana Central School, Ahmedabad",
+    img: sncs,
+    title: "Shree Narayana Central School, Ahmedabad",
     stream: "CBSE(XII), Science with Computer",
-    date: "May 2019 - May 2020",
+    duration: "May 2019 - May 2020",
     cal: CiCalendar,
     cgpa: "8.00",
   },
   {
     id: 3,
-    icon: sncs,
-    name: "Shree Narayana Central School, Ahmedabad",
+    img: sncs,
+    title: "Shree Narayana Central School, Ahmedabad",
     stream: "CBSE(X), Science with Computer",
-    date: "May 2017 - May 2018",
+    duration: "May 2017 - May 2018",
     cal: CiCalendar,
     cgpa: "9.21",
   },
@@ -39,33 +39,20 @@ export const Education = () => {
       <div className="w-full flex justify-center capitalize border-b-[1px] pb-10 border-zinc-500 font-['neue']">
         <h1 className="px-[200px] text-6xl tracking-tight">Education</h1>
       </div>
-      <div className="px-[200px] pt-10 flex flex-col items-center gap-[30px] justify-center">
+      <div className="timeline relative max-w-[1200px] my-[100px] mx-auto font-['neue']">
         {Edu.map((v, i) => {
           let Calend = v.cal;
           return (
             // ${i % 2 === 0 ? "hover:-ml-[200px]" : "hover:-mr-[200px]"}
             <div
-              className={`relative card border-[1px] border-zinc-900 rounded-xl min-w-[650px] p-8 duration-1000 transition-all`}
+              className={`contain card px-[50px] py-[10px] relative w-1/2 ${i % 2 === 0 ? "left-0" : "left-1/2"}`}
             >
-              <div className="header gap-6 flex items-center">
-                <img
-                  alt=""
-                  className="w-20 h-20 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${v.icon})` }}
-                />
-                <div className="content">
-                  <h1 className='text-xl font-["neue"]'>{v.name}</h1>
-                  <h1 className="text-sm font-['neue'] text-zinc-700">
-                    {v.stream}
-                  </h1>
-                  <h1 className="text-sm flex items-center gap-1 font-['neue'] text-zinc-700">
-                    <Calend />
-                    {v.date}
-                  </h1>
-                  <h1 className="text-md text-zinc-700 font-['neue']">
-                    CGPA : {v.cgpa}
-                  </h1>
-                </div>
+              <img className={`absolute h-[55px] w-[55px] object-scale-down top-[32px] rounded-xl z-10 ${i % 2 === 0 ? "-right-[28px]" : "-left-[28px]"}`} src={v.img} alt="" />
+              <div className="textBox bg-white relative px-[30px] py-[20px] rounded-xl text-lg">
+                <h2>{v.title}</h2>
+                <small>{v.duration}</small>
+                <p>{v.description}</p>
+                <span className={`${i%2 === 0 ? "leftArrow" : "rightArrow" }`}></span>
               </div>
             </div>
           );
